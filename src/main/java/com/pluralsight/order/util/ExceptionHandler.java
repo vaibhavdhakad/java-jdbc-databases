@@ -12,6 +12,9 @@ public class ExceptionHandler {
      * @param sqlException Exception from which information will be extracted
      */
     public static void handleException(SQLException sqlException) {
-
+    	System.out.println("Error Code: " + sqlException.getErrorCode());
+    	System.out.println("SQL State: " + sqlException.getSQLState());
+    	System.out.println("Message: " + sqlException.getMessage());
+    	sqlException.printStackTrace();
     }
 }
